@@ -65,7 +65,11 @@ public class MainActivity extends AppCompatActivity {
     {
         // true not good
         // false  good
-        return input.equals(".") || input.equals("-") ;
+        if(input.isEmpty() || input.equals(".") || input.equals("-") || input.equals(".-") || input.equals("-.") || input.equals("+") || input.equals(".+") || input.equals("+."))
+        {
+            return true;
+        }
+        return false;
     }
 
     public void next_page(View view)
